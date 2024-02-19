@@ -82,6 +82,8 @@ def experience():
         date_of_joining = data.get('date_of_joining')
         last_date = data.get('last_date')
 
+        # if request.methods == "GET":
+
         cur.execute("INSERT INTO experience (employee_id, company_name, role, date_of_joining, last_date) VALUES (%s, %s, %s, %s, %s)",
                     (employee_id, company_name, role, date_of_joining, last_date))
 
